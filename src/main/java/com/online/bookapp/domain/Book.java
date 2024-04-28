@@ -2,6 +2,7 @@ package com.online.bookapp.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Document(collection = "books")
+@Document(collection = "book")
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -24,7 +25,9 @@ public class Book {
 	private String author;
 	private String publisher;
 	private double price;
+	@Field("Category")
 	private String category;
+	private String imageLink;
 	private String publishedDate;
 	private String isbn;
 	
@@ -75,6 +78,12 @@ public class Book {
 	}
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
+	}
+	public String getImageLink() {
+		return imageLink;
+	}
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
 	}
 	
 }

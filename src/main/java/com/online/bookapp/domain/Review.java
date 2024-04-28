@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
-@Document(collection = "reviews")
+@Document(collection = "review")
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
