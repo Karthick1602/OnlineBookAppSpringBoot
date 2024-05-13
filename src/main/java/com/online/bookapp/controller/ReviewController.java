@@ -40,6 +40,13 @@ public class ReviewController {
 		return new ResponseEntity<>(reviews, HttpStatus.CREATED);
 		
 	}
+	@PostMapping("/review")
+	public ResponseEntity<Review> writeReview(@RequestBody Review review)
+	{   
+			reviewRepository.save(review);
+		return new ResponseEntity<>(review, HttpStatus.CREATED);
+		
+	}
 	
 	@GetMapping("/reviews")
 	public ResponseEntity<List<Review>> getAllReviews()

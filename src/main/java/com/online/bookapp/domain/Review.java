@@ -18,7 +18,8 @@ public class Review {
 	private String _Id;
 	
 	private String bookId;
-	private String reviewerId; // is the userId from User Class
+	private String reviewerId;
+	private String reviewerName;// is the userId from User Class
 	private String reviewContent;
 	private double rating;
 	
@@ -51,6 +52,12 @@ public class Review {
 	}
 	public void setRating(double rating) {
 		this.rating = rating;
+	}
+	public String getReviewerName() {
+		return reviewerName;
+	}
+	public void setReviewerName(String reviewerName) {
+		this.reviewerName = reviewerName;
 	}
 
 }
