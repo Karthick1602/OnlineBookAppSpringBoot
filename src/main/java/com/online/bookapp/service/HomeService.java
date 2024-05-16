@@ -53,6 +53,7 @@ public class HomeService {
 	        }
 
 	        homeBook.setRating(getAverageRating(ratings));
+	        homeBook.setNumberOfReviews(ratings.size());
 	        homeBookList.add(homeBook);
 	    }
 

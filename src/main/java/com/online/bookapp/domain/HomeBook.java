@@ -13,6 +13,7 @@ public class HomeBook {
 	private String imageLink;
 	private String bookId;
 	private double rating;
+	private int numberOfReviews;
 	
 	public String getTitle() {
 		return title;
@@ -61,6 +62,12 @@ public class HomeBook {
 	public String toString() {
 		return "HomeBook [title=" + title + ", author=" + author + ", publisher=" + publisher + ", category=" + category
 				+ ", imageLink=" + imageLink + ", bookId=" + bookId + ", rating=" + rating + "]";
+	}
+	public int getNumberOfReviews() {
+		return numberOfReviews;
+	}
+	public void setNumberOfReviews(int i) {
+		this.numberOfReviews = i;
 	}
 	
 	
