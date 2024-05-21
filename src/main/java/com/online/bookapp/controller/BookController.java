@@ -47,13 +47,12 @@ public class BookController {
 		return new ResponseEntity<>(book.get(), HttpStatus.OK);
 	}
 	
-//	@PostMapping("/books")
-//	public ResponseEntity<Integer> createBooks(@RequestBody List<Book> books) {
-//		for (Book book : books) {
-//			bookRepository.save(book);
-//		}
-//		return new ResponseEntity<>(books.size(), HttpStatus.OK);
-//	}
+	@PostMapping("/books/create")
+	public ResponseEntity<Book> createBook(@RequestBody Book book) {
+		
+			bookRepository.save(book);
+		return new ResponseEntity<>(book, HttpStatus.OK);
+	}
 	
 	@PostMapping("/books")
 	public ResponseEntity<List<Book>> createBooks(@RequestBody List<Book> books) {
